@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<title>Hangman in Angular JS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="lib/HangmanApp.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="HangmanApp" ng-controller="HangmanController">
+
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4 col-sm-3"></div>
+		<div class="col-md-4 col-sm-6 title">
+			{{title}}
+		</div>
+		<div class="col-md-4 col-sm-3"></div>
+	</div><br>	
+
+	<div class="row"><br><br>
+		<div class="col-md-4 col-sm-3"></div>
+		<div class="col-md-4 col-sm-6">
+			<div id="circle">
+				<div id="guess">{{guesses}}</div>
+				<div id="guess">{{guesses-1}}</div>
+				<div id="guess">{{guesses-2}}</div>
+				<div id="guess">{{guesses-3}}</div>
+				<div id="guess">{{guesses-4}}</div>
+				<div id="guess">{{guesses-5}}</div>
+			    <div class="center">{{guesses}}</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-3"></div>
+	</div><br><br>
+
+	<div class="row">
+		<div class="col-md-2 col-sm-3"></div>
+		<div class="col-md-4 col-sm-3 pull-left">	
+			<div>
+				<span class="glyphicon glyphicon-thumbs-down"></span> 
+				<span ng-repeat="letter in incorrectLetterChosen">
+				<span class="letter">	{{letter}}</span>
+				</span>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-3 pull-right">	
+			<div>
+				<span class="glyphicon glyphicon-thumbs-up"></span> 
+				<span ng-repeat="letter in correctLetterChosen">
+				<span class="letter">	{{letter}}</span>
+				</span>
+			</div>
+		</div>
+		<div class="col-md-2 col-sm-3"></div>
+	</div>	
+
+	<div class="row">
+		<div class="col-md-4 col-sm-3 word-guess">
+			You have to guess :: 
+		</div>
+		<div class="col-md-4 col-sm-6 word-display">
+			{{displayWord}}
+		</div>
+		<div class="col-md-4 col-sm-3"></div>
+	</div>	
+
+	<div class="row">
+		<div class="col-md-4 col-sm-3"></div>
+		<div class="col-md-4 col-sm-6">
+			<input type="text" name="guess" ng-model="input.letter">
+			<span></span>
+			<button class="btn btn-success" ng-click="letterCheck()">Check Letter</button><br>
+			
+		</div>
+		<div class="col-md-4 col-sm-3"></div>
+	</div><br><br>	
+	<div class="row">
+		<div class="col-md-4 col-sm-4"></div>
+		<div class="col-md-4 col-sm-4">
+			<button class="btn btn-primary btn-lg " ng-click="beginNewGame()">Start New Game</button>
+		</div>
+		<div class="col-md-4 col-sm-4"></div>
+	</div>	
+	
+</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+body{
+		background-color: lavender;
+	}
+	#circle{
+		width:250px;
+		height:250px;
+		border-color: blue;
+		border-radius: 50%;
+		position: relative;
+		overflow: hidden;
+		background-color:  #cc0000;
+
+	}
+	#guess{
+		position: absolute;
+		
+		width: 80%;
+		height: 80%;
+		border-radius: 50%;
+		}
+	
+	/*#guess:first-child{
+		top:-35%;
+		left:-21%;
+		 border-style: solid;
+		border-color: blue;
+		background-color: black;
+	}	
+	#guess:nth-child(2){
+		top:-93px;
+		left:50%;
+		 border-style: solid;
+		border-color: blue;
+		background-color: red;
+	}
+	#guess:nth-child(3){
+		top:50%;
+		left:0;
+		 border-style: solid;
+		border-color: blue;
+		background-color: yellow;
+	}
+	#guess:nth-child(4){
+		top:76%;
+		left:25%;
+		border-color: blue;
+		 border-style: solid;
+		background-color:blue;
+	}
+	#guess:nth-child(5){
+		top:24%;
+		left:77%;
+		border-color: blue;
+		 border-style: solid;
+		background-color:green;
+	}
+	#guess:nth-child(6){
+		top:50%;
+		left:50%;
+		 border-style: solid;
+		border-color: blue;
+		background-color: pink;
+	}*/
+	
+	 .center {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background: lightblue;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 200px;
+  font-size: 100px;
+  font-weight: bold;
+  color:#990000;
+}
+.glyphicon {
+    font-size: 50px;
+    color: green;
+}
+.glyphicon-thumbs-down{
+	font-size: 50px;
+	color: red;
+}
+.letter{
+	font-weight: bold;
+	font-size: 35px;
+	font-family: sans-serif;
+	color: blue;
+
+}
+.word-display{
+	font-size: 35px;
+	font-weight: bold;
+	color: red;
+	
+}	
+.word-guess{
+	font-size: 35px;
+	font-weight: bold;
+	color: red;
+	text-align: right;
+}	
+.title{
+	font-size: 20px;
+	text-align: center;
+}
